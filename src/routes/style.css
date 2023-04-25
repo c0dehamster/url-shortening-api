@@ -126,6 +126,7 @@ button {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 
 	background-color: var(--color-primary-400);
 	color: white;
@@ -153,6 +154,12 @@ button {
 	position: absolute;
 	white-space: nowrap;
 	width: 1px;
+}
+
+.error-message {
+	font-size: var(--font-size-100);
+	font-style: italic;
+	color: var(--color-accent-400);
 }
 
 /* Active states */

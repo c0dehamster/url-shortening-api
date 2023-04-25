@@ -115,4 +115,8 @@
 
 		text-align: center;
 	}
+
+	.form-wrapper {
+		width: 100%;
+	}
 </style>
