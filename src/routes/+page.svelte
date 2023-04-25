@@ -33,7 +33,7 @@
 	<ul class="services__list">
 		<li class="card">
 			<img src="" alt="" class="card__icon" />
-			<h3 class="card__subheading">Brand Recognition</h3>
+			<h3 class="card__heading">Brand Recognition</h3>
 			<p class="card__description">
 				Boost your brand recognition with each click. Generic links
 				don’t mean a thing. Branded links help instil confidence in your
@@ -43,7 +43,7 @@
 
 		<li class="card">
 			<img src="" alt="" class="card__icon" />
-			<h3 class="card__subheading">Detailed Records</h3>
+			<h3 class="card__heading">Detailed Records</h3>
 			<p class="card__description">
 				Gain insights into who is clicking your links. Knowing when and
 				where people engage with your content helps inform better
@@ -53,7 +53,7 @@
 
 		<li class="card">
 			<img src="" alt="" class="card__icon" />
-			<h3 class="card__subheading">Fully Customizable</h3>
+			<h3 class="card__heading">Fully Customizable</h3>
 			<p class="card__description">
 				Improve brand awareness and content discoverability through
 				customizable links, supercharging audience engagement.
