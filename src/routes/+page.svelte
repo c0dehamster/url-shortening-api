@@ -23,6 +23,7 @@
 
 	<ul class="results">
 		<ListItem />
+		<ListItem />
 	</ul>
 </div>
 
@@ -72,6 +73,8 @@
 </div>
 
 <style>
+	/* Hero section */
+
 	.hero__contents,
 	.form-wrapper,
 	.services,
@@ -80,7 +83,11 @@
 	}
 
 	.hero,
-	.hero__contents {
+	.hero__contents,
+	.form-wrapper,
+	.results,
+	.services,
+	.call-to-action {
 		display: grid;
 	}
 
@@ -116,7 +123,15 @@
 		text-align: center;
 	}
 
+	/* Form section */
+
 	.form-wrapper {
 		width: 100%;
+
+		gap: 1.5rem;
+	}
+
+	.results {
+		gap: 1.5rem;
 	}
 </style>

@@ -119,6 +119,10 @@ button {
 	outline: none;
 }
 
+ul {
+	list-style: none;
+}
+
 /* Utilities */
 
 .button {
