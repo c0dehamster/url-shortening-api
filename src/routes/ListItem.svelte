@@ -20,8 +20,9 @@
 		border-radius: 0.25rem;
 
 		background-color: white;
+		box-shadow: 0 0 0.51rem 0.5rem rgb(0 0 0 / 0.05);
 
-		box-shadow: 0 0 1rem 0.5rem rgb(0 0 0 / 0.05);
+		font-size: var(--font-size-200);
 	}
 
 	.short-link-wrapper {
