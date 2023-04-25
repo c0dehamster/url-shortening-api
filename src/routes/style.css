@@ -94,6 +94,8 @@ select {
 		11.2vw,
 		var(--font-size-900)
 	);
+
+	--padding-inline-outer: 1.5rem;
 }
 
 body {
