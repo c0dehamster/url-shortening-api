@@ -31,7 +31,7 @@
 	}
 
 	.app {
-		background-color: var(--color-neutral-200);
+		background-color: var(--color-neutral-100);
 	}
 
 	.app::before {

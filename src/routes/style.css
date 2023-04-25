@@ -71,6 +71,7 @@ select {
 
 	--color-accent-400: hsl(0, 87%, 67%);
 
+	--color-neutral-100: hsl(230 25% 95%); /* Apparently, a missing color */
 	--color-neutral-200: hsl(0, 0%, 75%);
 	--color-neutral-400: hsl(257, 7%, 63%);
 	--color-neutral-600: hsl(255, 11%, 22%);
