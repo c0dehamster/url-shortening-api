@@ -3,6 +3,9 @@
 	import ListItem from "./ListItem.svelte"
 
 	import illustrationWorking from "../lib/images/illustration-working.svg"
+	import iconBrandRecognition from "../lib/images/icon-brand-recognition.svg"
+	import iconDetailedRecords from "../lib/images/icon-detailed-records.svg"
+	import iconFullyCustomizable from "../lib/images/icon-fully-customizable.svg"
 </script>
 
 <section class="hero" style="--background-image: url({illustrationWorking})">
@@ -37,7 +40,10 @@
 
 	<ul class="services__list">
 		<li class="card">
-			<img src="" alt="" class="card__icon" />
+			<div class="card__icon-wrapper">
+				<img src={iconBrandRecognition} alt="" class="card__icon" />
+			</div>
+
 			<h3 class="card__heading">Brand Recognition</h3>
 			<p class="card__description">
 				Boost your brand recognition with each click. Generic links
@@ -47,21 +53,28 @@
 		</li>
 
 		<li class="card">
-			<img src="" alt="" class="card__icon" />
-			<h3 class="card__heading">Detailed Records</h3>
+			<div class="card__icon-wrapper">
+				<img src={iconDetailedRecords} alt="" class="card__icon" />
+			</div>
+
+			<h3 class="card__heading">Brand Recognition</h3>
 			<p class="card__description">
-				Gain insights into who is clicking your links. Knowing when and
-				where people engage with your content helps inform better
-				decisions.
+				Boost your brand recognition with each click. Generic links
+				don’t mean a thing. Branded links help instil confidence in your
+				content.
 			</p>
 		</li>
 
 		<li class="card">
-			<img src="" alt="" class="card__icon" />
-			<h3 class="card__heading">Fully Customizable</h3>
+			<div class="card__icon-wrapper">
+				<img src={iconFullyCustomizable} alt="" class="card__icon" />
+			</div>
+
+			<h3 class="card__heading">Brand Recognition</h3>
 			<p class="card__description">
-				Improve brand awareness and content discoverability through
-				customizable links, supercharging audience engagement.
+				Boost your brand recognition with each click. Generic links
+				don’t mean a thing. Branded links help instil confidence in your
+				content.
 			</p>
 		</li>
 	</ul>
@@ -156,5 +169,49 @@
 
 	.services__list {
 		gap: 5.75rem;
+	}
+
+	/* Service card */
+
+	.card {
+		position: relative;
+
+		padding-inline: 2rem;
+		padding-block-end: 2.5rem;
+		padding-block-start: 5rem;
+
+		display: grid;
+		gap: 1.5rem;
+		justify-items: center;
+
+		border-radius: 0.25rem;
+
+		background-color: white;
+	}
+
+	.card:not(:last-child)::before {
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 6rem;
+		width: 0.5rem;
+
+		background-color: var(--color-primary-400);
+	}
+
+	.card__icon-wrapper {
+		position: absolute;
+		transform: translateY(-50%);
+
+		width: 5.5rem;
+		aspect-ratio: 1;
+		border-radius: 50%;
+
+		display: grid;
+		place-items: center;
+
+		background-color: var(--color-primary-600);
 	}
 </style>
