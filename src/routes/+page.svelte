@@ -164,7 +164,7 @@
 	}
 
 	.services__description {
-		padding-block-end: 3rem;
+		padding-block-end: 5.75rem;
 	}
 
 	.services__list {
@@ -181,7 +181,7 @@
 		padding-block-start: 5rem;
 
 		display: grid;
-		gap: 1.5rem;
+		gap: 1rem;
 		justify-items: center;
 
 		border-radius: 0.25rem;
