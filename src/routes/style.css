@@ -99,3 +99,63 @@ select {
 body {
 	font-family: "Poppins", sans-serif;
 }
+
+h1,
+h2,
+h3 {
+	font-weight: var(--font-weight-bold);
+}
+
+p {
+	color: var(--color-neutral-400);
+}
+
+a,
+button {
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+
+/* Utilities */
+
+.button {
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: var(--color-primary-400);
+	color: white;
+
+	font-weight: var(--font-weight-bold);
+}
+
+.button::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+
+	transition: background-color 100ms ease-in;
+}
+
+.button-icon {
+	background: transparent;
+}
+
+.sr-only {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Active states */
+
+.button:hover::before,
+.button:focus::before {
+	background-color: rgb(255 255 255 / 0.4);
+}
