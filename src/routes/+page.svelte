@@ -99,6 +99,8 @@
 			"contents contents";
 		overflow-x: hidden;
 
+		padding-block-end: 5.5rem;
+
 		row-gap: 2.5rem;
 	}
 
@@ -128,6 +130,7 @@
 
 	.form-wrapper {
 		width: 100%;
+		padding-block-end: 5.5rem;
 
 		gap: 1.5rem;
 	}
@@ -140,10 +143,18 @@
 
 	.services {
 		text-align: center;
-		gap: 3rem;
+		padding-block-end: 5rem;
+	}
+
+	.services__heading {
+		padding-block-end: 1.5rem;
+	}
+
+	.services__description {
+		padding-block-end: 3rem;
 	}
 
 	.services__list {
-		gap: 3rem;
+		gap: 5.75rem;
 	}
 </style>
