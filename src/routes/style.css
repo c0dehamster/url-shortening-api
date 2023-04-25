@@ -117,6 +117,7 @@ button {
 	text-decoration: none;
 	border: none;
 	outline: none;
+	cursor: pointer;
 }
 
 ul {

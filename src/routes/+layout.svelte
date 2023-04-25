@@ -25,10 +25,28 @@
 <style>
 	.app,
 	.wrapper {
+		position: relative;
+
 		display: grid;
 	}
 
+	.app {
+		background-color: var(--color-neutral-200);
+	}
+
+	.app::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 58rem;
+
+		background-color: white;
+	}
+
 	.header {
+		position: relative;
 		padding-block-start: 2.5rem;
 		padding-inline: var(--padding-inline-outer);
 
