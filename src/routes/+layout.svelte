@@ -28,13 +28,21 @@
 		display: grid;
 	}
 
-	.header {
+	.header,
+	.wrapper {
 		padding-inline: var(--padding-inline-outer);
+	}
+
+	.header {
 		padding-block-start: 2.5rem;
 
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 2.5rem;
+	}
+
+	.wrapper {
+		justify-items: center;
 	}
 </style>

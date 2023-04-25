@@ -1,17 +1,23 @@
 <script>
 	import Form from "./Form.svelte"
 	import ListItem from "./ListItem.svelte"
+
+	import illustrationWorking from "../lib/images/illustration-working.svg"
 </script>
 
-<section class="hero">
-	<h1 class="hero__heading">More than just shorter links</h1>
+<section class="hero" style="--background-image: url({illustrationWorking})">
+	<img src={illustrationWorking} alt="" class="hero__illustration" />
 
-	<p class="hero__description">
-		Build your brand’s recognition and get detailed insights on how your
-		links are performing.
-	</p>
+	<div class="hero__contents">
+		<h1 class="hero__heading">More than just shorter links</h1>
 
-	<button class="button">Get Started</button>
+		<p class="hero__description">
+			Build your brand’s recognition and get detailed insights on how your
+			links are performing.
+		</p>
+
+		<button class="button">Get Started</button>
+	</div>
 </section>
 
 <div class="form-wrapper">
@@ -66,3 +72,29 @@
 	<h2 class="call-to-action__heading">Boost your links today</h2>
 	<button class="button">Get Started</button>
 </div>
+
+<style>
+	.hero,
+	.hero__contents {
+		display: grid;
+	}
+
+	.hero {
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas:
+			"illustration illustration"
+			"contents contents";
+	}
+
+	.hero__illustration {
+		grid-area: illustration;
+	}
+
+	.hero__contents {
+		grid-area: contents;
+
+		justify-items: center;
+
+		text-align: center;
+	}
+</style>
