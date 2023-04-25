@@ -63,4 +63,19 @@
 	.nav-links {
 		list-style: none;
 	}
+
+	@media screen and (max-width: 40rem) {
+		.navigation {
+			justify-content: end;
+		}
+
+		.button-icon {
+			display: block;
+		}
+
+		.nav-contents {
+			/* Temporary */
+			display: none;
+		}
+	}
 </style>
