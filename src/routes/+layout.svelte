@@ -28,13 +28,9 @@
 		display: grid;
 	}
 
-	.header,
-	.wrapper {
-		padding-inline: var(--padding-inline-outer);
-	}
-
 	.header {
 		padding-block-start: 2.5rem;
+		padding-inline: var(--padding-inline-outer);
 
 		display: flex;
 		justify-content: space-between;

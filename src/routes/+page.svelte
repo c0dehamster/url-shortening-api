@@ -6,8 +6,6 @@
 </script>
 
 <section class="hero" style="--background-image: url({illustrationWorking})">
-	<img src={illustrationWorking} alt="" class="hero__illustration" />
-
 	<div class="hero__contents">
 		<h1 class="hero__heading">More than just shorter links</h1>
 
@@ -74,26 +72,46 @@
 </div>
 
 <style>
+	.hero__contents,
+	.form-wrapper,
+	.services,
+	.call-to-action {
+		padding-inline: var(--padding-inline-outer);
+	}
+
 	.hero,
 	.hero__contents {
 		display: grid;
 	}
 
 	.hero {
-		grid-template-rows: 1fr 1fr;
+		position: relative;
 		grid-template-areas:
 			"illustration illustration"
 			"contents contents";
+		overflow-x: hidden;
+
+		row-gap: 2.5rem;
 	}
 
-	.hero__illustration {
-		grid-area: illustration;
+	.hero::before {
+		content: "";
+		position: relative;
+		min-height: 90vw;
+		width: 100vw;
+
+		left: 1rem;
+
+		background-image: var(--background-image);
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
 	.hero__contents {
 		grid-area: contents;
 
 		justify-items: center;
+		align-items: baseline;
 
 		text-align: center;
 	}
