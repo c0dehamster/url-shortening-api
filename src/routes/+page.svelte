@@ -87,6 +87,7 @@
 	.form-wrapper,
 	.results,
 	.services,
+	.services__list,
 	.call-to-action {
 		display: grid;
 	}
@@ -133,5 +134,16 @@
 
 	.results {
 		gap: 1.5rem;
+	}
+
+	/* Services */
+
+	.services {
+		text-align: center;
+		gap: 3rem;
+	}
+
+	.services__list {
+		gap: 3rem;
 	}
 </style>
