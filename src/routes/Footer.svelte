@@ -1,5 +1,4 @@
 <script>
-	import logo from "../lib/images/logo.svg"
 </script>
 
 <footer class="footer">
@@ -206,11 +205,6 @@
 
 	/* Media query */
 	@media screen and (min-width: 60rem) {
-		.footer-nav__section,
-		.footer-nav__list {
-			justify-items: start;
-		}
-
 		.footer {
 			padding-block: 4rem;
 
@@ -226,15 +220,18 @@
 	@media screen and (min-width: 72rem) {
 		.footer {
 			justify-items: start;
-		}
-
-		.footer {
-			padding-block: 4rem;
 
 			grid-template-columns: 2fr 3fr 1fr;
 			grid-template-areas: "logo footer-nav social-links";
+		}
 
-			text-align: start;
+		.footer-nav__section,
+		.footer-nav__list {
+			justify-items: start;
+		}
+
+		.footer-nav {
+			justify-items: start;
 		}
 
 		.social-links {
