@@ -138,7 +138,7 @@
 			z-index: -1;
 
 			padding: 2.5rem 1.5rem;
-			border-radius: 0.25rem;
+			border-radius: 0.5rem;
 
 			flex-direction: column;
 

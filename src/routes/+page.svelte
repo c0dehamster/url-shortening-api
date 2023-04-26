@@ -133,10 +133,11 @@
 	.hero::before {
 		content: "";
 		position: relative;
-		min-height: 90vw;
+		min-height: 87vw;
 		width: 100vw;
 
-		left: 1rem;
+		left: 1.5rem;
+		right: 0;
 
 		background-image: var(--background-image);
 		background-repeat: no-repeat;
