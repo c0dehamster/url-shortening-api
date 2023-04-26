@@ -60,7 +60,7 @@
 		background-color: var(--color-primary-600);
 	}
 
-	@media screen and (min-width: 40rem) {
+	@media screen and (min-width: 50rem) {
 		.list-item,
 		.short-link-wrapper {
 			flex-direction: row;

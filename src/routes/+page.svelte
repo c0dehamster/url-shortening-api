@@ -21,27 +21,15 @@
 <CallToAction />
 
 <style>
-	/* General */
-
-	.form-wrapper {
-		padding-inline: var(--padding-inline-outer);
-	}
-
 	.form-wrapper,
 	.results {
 		display: grid;
+		gap: 1.5rem;
 	}
-
-	/* Form section */
 
 	.form-wrapper {
 		width: 100%;
 		padding-block-end: 5.5rem;
-
-		gap: 1.5rem;
-	}
-
-	.results {
-		gap: 1.5rem;
+		padding-inline: var(--padding-inline-outer);
 	}
 </style>
