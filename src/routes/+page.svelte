@@ -64,9 +64,9 @@
 
 			<h3 class="card__heading">Brand Recognition</h3>
 			<p class="card__description">
-				Boost your brand recognition with each click. Generic links
-				don’t mean a thing. Branded links help instil confidence in your
-				content.
+				Gain insights into who is clicking your links. Knowing when and
+				where people engage with your content helps inform better
+				decisions.
 			</p>
 		</li>
 
@@ -77,9 +77,8 @@
 
 			<h3 class="card__heading">Brand Recognition</h3>
 			<p class="card__description">
-				Boost your brand recognition with each click. Generic links
-				don’t mean a thing. Branded links help instil confidence in your
-				content.
+				Improve brand awareness and content discoverability through
+				customizable links, supercharging audience engagement.
 			</p>
 		</li>
 	</ul>
@@ -127,6 +126,7 @@
 		grid-template-areas:
 			"illustration illustration"
 			"contents contents";
+		justify-items: center;
 
 		padding-block-end: 5.5rem;
 
@@ -151,6 +151,8 @@
 	}
 
 	.hero__contents {
+		max-width: 75vw; /* To improve readability on intermediate screens */
+
 		grid-area: contents;
 
 		justify-items: center;
@@ -195,11 +197,27 @@
 
 	.services__description {
 		max-width: 33rem;
-		padding-block-end: 5.75rem;
+		padding-block-end: 3.5rem;
 	}
 
 	.services__list {
+		padding-block-start: 2.75rem;
+
+		position: relative;
 		gap: 5.75rem;
+	}
+
+	.services__list::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+
+		width: 0.5rem;
+
+		background-color: var(--color-primary-400);
 	}
 
 	/* Service card */
@@ -218,18 +236,6 @@
 		border-radius: 0.25rem;
 
 		background-color: white;
-	}
-
-	.card:not(:last-child)::before {
-		content: "";
-		position: absolute;
-		top: 100%;
-		left: 50%;
-		transform: translateX(-50%);
-		height: 6rem;
-		width: 0.5rem;
-
-		background-color: var(--color-primary-400);
 	}
 
 	.card__icon-wrapper {
@@ -321,6 +327,43 @@
 		.services__list {
 			grid-template-columns: 1fr 1fr 1fr;
 			gap: 2rem;
+		}
+
+		.services__list::before {
+			top: 50%;
+			bottom: 50%;
+			left: 0;
+			right: 0;
+			transform: translateY(-50%);
+
+			width: 100%;
+			height: 0.5rem;
+
+			background-color: var(--color-primary-400);
+		}
+
+		.card {
+			padding-block-start: 4.5rem;
+
+			justify-items: start;
+
+			text-align: start;
+		}
+
+		.card:first-child {
+			margin-block-end: 5.5rem;
+		}
+
+		.card:nth-child(2) {
+			margin-block: 2.75rem 2.75rem;
+		}
+
+		.card:nth-child(3) {
+			margin-block-start: 5.5rem;
+		}
+
+		.card__icon-wrapper {
+			left: 2rem;
 		}
 	}
 </style>
