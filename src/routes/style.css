@@ -92,7 +92,7 @@ select {
 
 	--font-size-heading-responsive: clamp(
 		var(--font-size-800),
-		11.2vw,
+		10vw,
 		var(--font-size-900)
 	);
 

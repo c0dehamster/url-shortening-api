@@ -11,7 +11,9 @@
 </script>
 
 <section class="hero" style="--background-image: url({illustrationWorking})">
+	<!-- Dummy div to work around the weirdly offset image -->
 	<div class="hero__illustration" />
+
 	<div class="hero__contents">
 		<h1 class="hero__heading">More than just shorter links</h1>
 
@@ -130,10 +132,9 @@
 		row-gap: 2.5rem;
 	}
 
-	/* Dummy div to work around the weirdly offset image */
-
 	.hero__illustration {
 		height: 87vw;
+		width: 100%;
 		position: relative;
 		grid-area: illustration;
 	}
@@ -270,14 +271,30 @@
 
 	@media screen and (min-width: 60rem) {
 		.hero {
+			padding-block-end: 4.5rem;
 			grid-template-columns: 1fr 1fr;
 			grid-template-areas:
 				"contents illustration"
 				"contents illustration";
+
+			align-items: center;
 		}
 
 		.hero__illustration {
 			height: 33.3vw;
+		}
+
+		.hero__contents {
+			justify-items: start;
+			text-align: start;
+		}
+
+		.hero__description {
+			font-size: var(--font-size-500);
+		}
+
+		.button {
+			font-size: var(--font-size-400);
 		}
 	}
 </style>
