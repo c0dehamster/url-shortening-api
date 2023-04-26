@@ -152,6 +152,15 @@
 		text-align: center;
 	}
 
+	.hero__heading {
+		padding-block-end: 1rem;
+		font-size: var(--font-size-heading-responsive);
+	}
+
+	.hero__description {
+		padding-block-end: 2rem;
+	}
+
 	/* Form section */
 
 	.form-wrapper {

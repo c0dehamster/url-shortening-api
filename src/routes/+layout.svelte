@@ -47,7 +47,7 @@
 
 	.header {
 		position: relative;
-		padding-block-start: 2.5rem;
+		padding-block: 2.5rem 1.5rem;
 		padding-inline: var(--padding-inline-outer);
 
 		display: flex;
