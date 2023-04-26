@@ -1,9 +1,18 @@
+<script>
+	let copied = false
+
+	const onCopy = () => (copied = !copied)
+
+	$: buttonClass = `button ${copied ? "button--copied" : ""}`
+	$: buttonText = !copied ? "Copy" : "Copied!"
+</script>
+
 <li class="list-item">
 	<p class="initial-link">https://www.frontendmentor.io</p>
 
 	<div class="short-link-wrapper">
 		<p class="short-link">https://relink/k4lKyk</p>
-		<button class="button">Copy</button>
+		<button class={buttonClass} on:click={onCopy}>{buttonText}</button>
 	</div>
 </li>
 
@@ -56,8 +65,12 @@
 
 	/* Active states */
 
-	.button--clicked {
+	.button--copied {
 		background-color: var(--color-primary-600);
+	}
+
+	.button--copied::before {
+		display: none;
 	}
 
 	@media screen and (min-width: 50rem) {
