@@ -116,11 +116,27 @@
 			justify-content: stretch;
 
 			padding: 3.25rem 4rem;
+
+			font-size: var(--font-size-400);
 		}
 
 		.form::before {
 			inset: 0;
 			background-image: var(--background-desktop);
+		}
+
+		.button,
+		.form__input {
+			height: 4rem;
+			border-radius: 0.5rem;
+		}
+
+		.form__input {
+			padding-inline: 2rem;
+		}
+
+		.error-message {
+			font-size: var(--font-size-200);
 		}
 	}
 </style>
