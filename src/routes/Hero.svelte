@@ -19,26 +19,16 @@
 </section>
 
 <style>
-	.button {
-		height: 3.5rem;
-		border-radius: 1.75rem;
-		padding-inline: 2.5rem;
-
-		font-size: var(--font-size-200);
-	}
-
 	.hero {
 		width: 100%;
 		position: relative;
+		padding-block-end: 5.5rem;
 
 		display: grid;
-
 		grid-template-areas:
 			"illustration illustration"
 			"contents contents";
 		justify-items: center;
-
-		padding-block-end: 5.5rem;
 
 		row-gap: 2.5rem;
 	}
@@ -106,10 +96,6 @@
 
 		.hero__description {
 			font-size: var(--font-size-500);
-		}
-
-		.button {
-			font-size: var(--font-size-400);
 		}
 	}
 </style>

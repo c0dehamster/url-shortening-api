@@ -136,9 +136,14 @@ ul {
 	align-items: center;
 	overflow: hidden;
 
+	height: 3.5rem;
+	border-radius: 1.75rem;
+	padding-inline: 2.5rem;
+
 	background-color: var(--color-primary-400);
 	color: white;
 
+	font-size: var(--font-size-200);
 	font-weight: var(--font-weight-bold);
 }
 
@@ -182,5 +187,9 @@ ul {
 @media screen and (min-width: 60rem) {
 	:root {
 		--padding-inline-outer: 11.5vh;
+	}
+
+	.button {
+		font-size: var(--font-size-400);
 	}
 }

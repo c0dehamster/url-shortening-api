@@ -41,14 +41,6 @@
 		display: grid;
 	}
 
-	.button {
-		height: 3.5rem;
-		border-radius: 1.75rem;
-		padding-inline: 2.5rem;
-
-		font-size: var(--font-size-200);
-	}
-
 	/* Form section */
 
 	.form-wrapper {
@@ -92,8 +84,5 @@
 	}
 
 	@media screen and (min-width: 72rem) {
-		.button {
-			font-size: var(--font-size-400);
-		}
 	}
 </style>
