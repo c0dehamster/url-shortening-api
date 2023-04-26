@@ -60,7 +60,7 @@
 	.form__input,
 	.error-message {
 		position: relative;
-		z-index: 10;
+		z-index: 5;
 	}
 
 	.button,

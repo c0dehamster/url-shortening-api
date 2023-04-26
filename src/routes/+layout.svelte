@@ -49,11 +49,14 @@
 		position: relative;
 		padding-block: 2.5rem 1.5rem;
 		padding-inline: var(--padding-inline-outer);
+		z-index: 10;
 
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 2.5rem;
+
+		background-color: white;
 	}
 
 	.wrapper {
