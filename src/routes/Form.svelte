@@ -14,14 +14,16 @@
 	class="form"
 	style="--background-mobile: url({backgroundMobile}); --background-desktop: url({backgroundDesktop})"
 	on:submit|preventDefault={onSubmit}>
-	<input
-		type="text"
-		class={inputClass}
-		placeholder="Shorten a link here..." />
+	<div class="form__input-wrapper">
+		<input
+			type="text"
+			class={inputClass}
+			placeholder="Shorten a link here..." />
 
-	{#if error}
-		<p class="error-message">Please add a link</p>
-	{/if}
+		{#if error}
+			<p class="error-message">Please add a link</p>
+		{/if}
+	</div>
 
 	<button class="button">Shorten it!</button>
 </form>
@@ -34,6 +36,8 @@
 
 		display: flex;
 		flex-direction: column;
+		gap: 1rem;
+
 		overflow: hidden;
 		border-radius: 0.625rem;
 
@@ -71,7 +75,13 @@
 		outline: none;
 	}
 
+	.form__input-wrapper {
+		width: 100%;
+		grid-area: input;
+	}
+
 	.form__input {
+		width: 100%;
 		padding-inline: 1.5rem;
 
 		transition: outline 100ms linear;
@@ -82,7 +92,8 @@
 	}
 
 	.button {
-		margin-block-start: 1rem;
+		min-width: fit-content;
+		padding-inline: 2.5rem;
 	}
 
 	/* Active states */
@@ -94,5 +105,22 @@
 
 	.form__input--error {
 		outline: 3px solid var(--color-accent-400);
+	}
+
+	/* Media query */
+
+	@media screen and (min-width: 40rem) {
+		.form {
+			flex-direction: row;
+			gap: 1.5rem;
+			justify-content: stretch;
+
+			padding: 3.25rem 4rem;
+		}
+
+		.form::before {
+			inset: 0;
+			background-image: var(--background-desktop);
+		}
 	}
 </style>

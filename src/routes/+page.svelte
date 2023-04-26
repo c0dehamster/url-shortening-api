@@ -122,6 +122,7 @@
 	/* Hero section */
 
 	.hero {
+		width: 100%;
 		position: relative;
 		grid-template-areas:
 			"illustration illustration"
@@ -133,7 +134,7 @@
 	}
 
 	.hero__illustration {
-		height: 87vw;
+		height: min(87vw, 40rem);
 		width: 100%;
 		position: relative;
 		grid-area: illustration;
@@ -269,7 +270,12 @@
 
 	/* Media query */
 
-	@media screen and (min-width: 60rem) {
+	@media screen and (min-width: 40rem) {
+	}
+
+	@media screen and (min-width: 72rem) {
+		/* Hero section */
+
 		.hero {
 			padding-block-end: 4.5rem;
 			grid-template-columns: 1fr 1fr;
@@ -285,6 +291,8 @@
 		}
 
 		.hero__contents {
+			padding-inline: var(--padding-inline-outer) 0px;
+
 			justify-items: start;
 			text-align: start;
 		}
@@ -296,5 +304,7 @@
 		.button {
 			font-size: var(--font-size-400);
 		}
+
+		/* Form wrapper */
 	}
 </style>

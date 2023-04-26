@@ -92,7 +92,7 @@ select {
 
 	--font-size-heading-responsive: clamp(
 		var(--font-size-800),
-		10vw,
+		6vw,
 		var(--font-size-900)
 	);
 
@@ -175,4 +175,12 @@ ul {
 .button:hover::before,
 .button:focus::before {
 	background-color: rgb(255 255 255 / 0.4);
+}
+
+/* Media quiery */
+
+@media screen and (min-width: 60rem) {
+	:root {
+		--padding-inline-outer: 11.5vh;
+	}
 }
