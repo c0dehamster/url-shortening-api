@@ -134,7 +134,6 @@
 			inset-inline: 1.5rem;
 			top: 6rem;
 			transform: translateY(-100%);
-			transition: 200ms ease-in;
 			z-index: -1;
 
 			padding: 2.5rem 1.5rem;
@@ -148,6 +147,8 @@
 
 		.nav-contents--expanded {
 			z-index: 20;
+			transition: 200ms ease-in;
+
 			transform: translateY(0%);
 
 			opacity: 1;

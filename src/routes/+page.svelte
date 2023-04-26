@@ -11,6 +11,7 @@
 </script>
 
 <section class="hero" style="--background-image: url({illustrationWorking})">
+	<div class="hero__illustration" />
 	<div class="hero__contents">
 		<h1 class="hero__heading">More than just shorter links</h1>
 
@@ -123,25 +124,28 @@
 		grid-template-areas:
 			"illustration illustration"
 			"contents contents";
-		overflow-x: hidden;
 
 		padding-block-end: 5.5rem;
 
 		row-gap: 2.5rem;
 	}
 
-	.hero::before {
-		content: "";
-		position: relative;
-		min-height: 87vw;
-		width: 100vw;
+	/* Dummy div to work around the weirdly offset image */
 
-		left: 1.5rem;
-		right: 0;
+	.hero__illustration {
+		height: 87vw;
+		position: relative;
+		grid-area: illustration;
+	}
+
+	.hero__illustration::before {
+		content: "";
+		position: absolute;
+		inset: 0 0 0 8%;
 
 		background-image: var(--background-image);
-		background-repeat: no-repeat;
 		background-size: cover;
+		background-repeat: no-repeat;
 	}
 
 	.hero__contents {
@@ -260,5 +264,20 @@
 		color: var(--color-neutral-100);
 
 		font-size: var(--font-size-700);
+	}
+
+	/* Media query */
+
+	@media screen and (min-width: 60rem) {
+		.hero {
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas:
+				"contents illustration"
+				"contents illustration";
+		}
+
+		.hero__illustration {
+			height: 33.3vw;
+		}
 	}
 </style>
