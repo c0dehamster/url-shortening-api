@@ -31,6 +31,7 @@
 	}
 
 	.app {
+		width: 100vw;
 		background-color: var(--color-neutral-100);
 	}
 
