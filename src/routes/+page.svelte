@@ -184,6 +184,7 @@
 	/* Services */
 
 	.services {
+		justify-items: center;
 		text-align: center;
 		padding-block-end: 5rem;
 	}
@@ -193,6 +194,7 @@
 	}
 
 	.services__description {
+		max-width: 33rem;
 		padding-block-end: 5.75rem;
 	}
 
@@ -271,6 +273,15 @@
 	/* Media query */
 
 	@media screen and (min-width: 40rem) {
+		/* Services */
+
+		.services__heading {
+			font-size: var(--font-size-800);
+		}
+
+		.services__description {
+			font-size: var(--font-size-300);
+		}
 	}
 
 	@media screen and (min-width: 72rem) {
@@ -305,6 +316,11 @@
 			font-size: var(--font-size-400);
 		}
 
-		/* Form wrapper */
+		/* Services */
+
+		.services__list {
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 2rem;
+		}
 	}
 </style>
