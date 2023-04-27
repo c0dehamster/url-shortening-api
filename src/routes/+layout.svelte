@@ -31,7 +31,6 @@
 	}
 
 	.app {
-		width: fit-content;
 		background-color: var(--color-neutral-100);
 	}
 
@@ -62,5 +61,15 @@
 
 	.wrapper {
 		justify-items: center;
+	}
+
+	@media screen and (min-width: 40rem) {
+		.app::before {
+			height: 50rem;
+		}
+
+		.header {
+			padding-block: 3rem 5rem;
+		}
 	}
 </style>

@@ -8,9 +8,13 @@
 </script>
 
 <li class="list-item">
-	<p class="initial-link">https://www.frontendmentor.io</p>
+	<div class="list-item__align-left">
+		<div class="initial-link-wrapper">
+			<p class="initial-link">https://www.frontendmentor.io</p>
+		</div>
+	</div>
 
-	<div class="short-link-wrapper">
+	<div class="list-item__align-right">
 		<p class="short-link">https://relink/k4lKyk</p>
 		<button class={buttonClass} on:click={onCopy}>{buttonText}</button>
 	</div>
@@ -18,7 +22,7 @@
 
 <style>
 	.list-item,
-	.short-link-wrapper {
+	.list-item__align-right {
 		display: flex;
 		flex-direction: column;
 		gap: 0.75rem;
@@ -31,11 +35,54 @@
 		background-color: white;
 		box-shadow: 0 0 0.5rem 0.5rem rgb(0 0 0 / 0.05);
 
+		overflow-x: hidden;
+
 		font-size: var(--font-size-200);
 	}
 
-	.short-link-wrapper {
+	.list-item__align-left {
+		flex: 1;
+		position: relative;
+		overflow-x: hidden;
+	}
+
+	/* Text fadeout in case of overflow */
+
+	.list-item__align-left::before {
+		content: "";
+		width: 4rem;
+		position: absolute;
+		z-index: 1;
+		right: 0;
+		inset-block: 0;
+
+		background: linear-gradient(to right, transparent, white);
+	}
+
+	.initial-link-wrapper {
+		border-bottom: 1px solid var(--color-neutral-200);
+
+		overflow-x: scroll;
+	}
+
+	.list-item__align-right {
 		padding-inline: 1rem;
+	}
+
+	/* Scrollbar */
+
+	.initial-link-wrapper::-webkit-scrollbar {
+		height: 0.25rem;
+	}
+
+	.initial-link-wrapper::-webkit-scrollbar-track {
+		background-color: white;
+	}
+
+	.initial-link-wrapper::-webkit-scrollbar-thumb {
+		border: none;
+		border-radius: 0.125rem;
+		background-color: var(--color-primary-400);
 	}
 
 	.initial-link {
@@ -43,8 +90,6 @@
 
 		padding-inline: 1rem;
 		padding-block-end: 0.75rem;
-
-		border-bottom: 1px solid var(--color-neutral-200);
 
 		color: var(--color-neutral-600);
 
@@ -73,15 +118,15 @@
 		display: none;
 	}
 
-	@media screen and (min-width: 50rem) {
+	@media screen and (min-width: 40rem) {
 		.list-item,
-		.short-link-wrapper {
+		.list-item__align-right {
 			flex-direction: row;
 			align-items: center;
 			gap: 1.5rem;
 		}
 
-		.short-link-wrapper {
+		.list-item__align-right {
 			padding: 0px;
 		}
 
@@ -93,9 +138,12 @@
 			box-shadow: 0 0 1rem 0.5rem rgb(0 0 0 / 0.05);
 		}
 
+		.initial-link-wrapper {
+			border: none;
+		}
+
 		.initial-link {
 			padding: 0px;
-			border: none;
 		}
 	}
 </style>
