@@ -32,6 +32,7 @@
 		<input
 			type="text"
 			class={inputClass}
+			name="initialLink"
 			placeholder="Shorten a link here..."
 			bind:value={initialLink} />
 

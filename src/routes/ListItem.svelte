@@ -1,4 +1,8 @@
-<script>
+<script lang="ts">
+	export let id = ""
+	export let shortLink = ""
+	export let originalLink = ""
+
 	let copied = false
 
 	const onCopy = () => (copied = !copied)
@@ -7,15 +11,15 @@
 	$: buttonText = !copied ? "Copy" : "Copied!"
 </script>
 
-<li class="list-item">
+<li class="list-item" {id}>
 	<div class="list-item__align-left">
-		<div class="initial-link-wrapper">
-			<p class="initial-link">https://www.frontendmentor.io</p>
+		<div class="original-link-wrapper">
+			<a class="original-link" href={originalLink}>{originalLink}</a>
 		</div>
 	</div>
 
 	<div class="list-item__align-right">
-		<p class="short-link">https://relink/k4lKyk</p>
+		<a class="short-link" href={shortLink}>{shortLink}</a>
 		<button class={buttonClass} on:click={onCopy}>{buttonText}</button>
 	</div>
 </li>
@@ -41,6 +45,9 @@
 	}
 
 	.list-item__align-left {
+		padding-inline: 1rem;
+		padding-block-end: 0.75rem;
+
 		flex: 1;
 		position: relative;
 		overflow-x: hidden;
@@ -59,7 +66,7 @@
 		background: linear-gradient(to right, transparent, white);
 	}
 
-	.initial-link-wrapper {
+	.original-link-wrapper {
 		border-bottom: 1px solid var(--color-neutral-200);
 
 		overflow-x: scroll;
@@ -71,25 +78,22 @@
 
 	/* Scrollbar */
 
-	.initial-link-wrapper::-webkit-scrollbar {
+	.original-link-wrapper::-webkit-scrollbar {
 		height: 0.25rem;
 	}
 
-	.initial-link-wrapper::-webkit-scrollbar-track {
+	.original-link-wrapper::-webkit-scrollbar-track {
 		background-color: white;
 	}
 
-	.initial-link-wrapper::-webkit-scrollbar-thumb {
+	.original-link-wrapper::-webkit-scrollbar-thumb {
 		border: none;
 		border-radius: 0.125rem;
 		background-color: var(--color-primary-400);
 	}
 
-	.initial-link {
+	.original-link {
 		width: 100%;
-
-		padding-inline: 1rem;
-		padding-block-end: 0.75rem;
 
 		color: var(--color-neutral-600);
 
@@ -138,11 +142,11 @@
 			box-shadow: 0 0 1rem 0.5rem rgb(0 0 0 / 0.05);
 		}
 
-		.initial-link-wrapper {
+		.original-link-wrapper {
 			border: none;
 		}
 
-		.initial-link {
+		.original-link {
 			padding: 0px;
 		}
 	}

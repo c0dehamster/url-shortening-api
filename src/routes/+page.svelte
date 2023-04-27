@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
 	import Hero from "./Hero.svelte"
 	import Form from "./Form.svelte"
 	import ListItem from "./ListItem.svelte"
 	import Services from "./Services.svelte"
 	import CallToAction from "./CallToAction.svelte"
 
-	export let data
+	import { ResultsStore } from "./stores"
 </script>
 
 <Hero />
@@ -13,10 +13,13 @@
 <div class="form-wrapper">
 	<Form />
 
-	<ul class="results">
-		<ListItem />
-		<ListItem />
-	</ul>
+	{#if $ResultsStore.items.length > 0}
+		<ul class="results">
+			{#each $ResultsStore.items as item}
+				<ListItem {...item} />
+			{/each}
+		</ul>
+	{/if}
 </div>
 
 <Services />
