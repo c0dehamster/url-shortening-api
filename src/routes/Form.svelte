@@ -1,10 +1,21 @@
-<script>
+<script lang="ts">
 	import backgroundMobile from "../lib/images/bg-shorten-mobile.svg"
 	import backgroundDesktop from "../lib/images/bg-shorten-desktop.svg"
 
-	let error = false
+	import { Utils } from "./Utils"
 
-	const onSubmit = () => {}
+	let error = false
+	let initialLink = ""
+
+	const onSubmit = async () => {
+		if (initialLink === "") {
+			error = true
+			return
+		}
+
+		error = false
+		console.log(await Utils.getShortLink(initialLink))
+	}
 
 	$: inputClass = `form__input ${error ? "form__input--error" : ""}`
 </script>
