@@ -46,9 +46,9 @@
 		overflow-x: hidden;
 	}
 
-	/* Text fadeout in case of overflow */
-
 	.list-item__align-left::before {
+		/* Text fadeout in case of overflow */
+
 		content: "";
 		width: 4rem;
 		position: absolute;
@@ -118,7 +118,7 @@
 		display: none;
 	}
 
-	@media screen and (min-width: 40rem) {
+	@media screen and (min-width: 50rem) {
 		.list-item,
 		.list-item__align-right {
 			flex-direction: row;

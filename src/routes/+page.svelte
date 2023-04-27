@@ -4,6 +4,9 @@
 	import ListItem from "./ListItem.svelte"
 	import Services from "./Services.svelte"
 	import CallToAction from "./CallToAction.svelte"
+
+	export let data
+	console.log(data)
 </script>
 
 <Hero />
