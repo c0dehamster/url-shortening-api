@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import illustrationWorking from "../lib/images/illustration-working.svg"
 </script>
 

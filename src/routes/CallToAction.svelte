@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import backgroundCTAMobile from "../lib/images/bg-boost-mobile.svg"
 	import backgroundCTADesktop from "../lib/images/bg-boost-desktop.svg"
 </script>

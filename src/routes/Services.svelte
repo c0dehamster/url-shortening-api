@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import iconBrandRecognition from "../lib/images/icon-brand-recognition.svg"
 	import iconDetailedRecords from "../lib/images/icon-detailed-records.svg"
 	import iconFullyCustomizable from "../lib/images/icon-fully-customizable.svg"

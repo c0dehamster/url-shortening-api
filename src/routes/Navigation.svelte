@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	let expanded = false
 
 	$: navContentsClass = `nav-contents ${

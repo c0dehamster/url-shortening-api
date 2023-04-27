@@ -2,7 +2,7 @@ import { writable } from "svelte/store"
 import type { Writable } from "svelte/store"
 
 interface Item {
-    id: number
+    id: string
     shortLink: string
     originalLink: string
 }
@@ -21,7 +21,7 @@ const createArrayStore = () => {
 		})
 	}
 
-	const removeItem = (id: number) => {
+	const removeItem = (id: string) => {
 		update(store => {
 			let itemsUpdated = store.items.filter((item: Item) => item.id !== id)
 
