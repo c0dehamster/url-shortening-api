@@ -6,7 +6,6 @@
 	import CallToAction from "./CallToAction.svelte"
 
 	export let data
-	console.log(data)
 </script>
 
 <Hero />

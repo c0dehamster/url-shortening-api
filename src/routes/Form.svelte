@@ -2,6 +2,7 @@
 	import backgroundMobile from "../lib/images/bg-shorten-mobile.svg"
 	import backgroundDesktop from "../lib/images/bg-shorten-desktop.svg"
 
+	import { ResultsStore } from "./stores"
 	import { Utils } from "./Utils"
 
 	let error = false
@@ -14,9 +15,11 @@
 		}
 
 		error = false
-		console.log(await Utils.getShortLink(initialLink))
+		let response = await Utils.getShortLink(initialLink)
+		ResultsStore.addItem(response)
 	}
 
+	$: console.log($ResultsStore.items)
 	$: inputClass = `form__input ${error ? "form__input--error" : ""}`
 </script>
 
@@ -29,7 +32,8 @@
 		<input
 			type="text"
 			class={inputClass}
-			placeholder="Shorten a link here..." />
+			placeholder="Shorten a link here..."
+			bind:value={initialLink} />
 
 		{#if error}
 			<p class="error-message">Please add a link</p>
