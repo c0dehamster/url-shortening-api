@@ -13,6 +13,11 @@ const getShortLink = async (link: string) => {
 	}
 }
 
+const copyText = async (text: string) => {
+	if ("clipboard" in navigator) await navigator.clipboard.writeText(text)
+}
+
 export const Utils = {
 	getShortLink,
+	copyText
 }

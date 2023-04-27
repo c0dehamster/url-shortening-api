@@ -1,11 +1,16 @@
 <script lang="ts">
+	import { Utils } from "./Utils"
+
 	export let id = ""
 	export let shortLink = ""
 	export let originalLink = ""
 
 	let copied = false
 
-	const onCopy = () => (copied = !copied)
+	const onCopy = () => {
+		copied = !copied
+		Utils.copyText(shortLink)
+	}
 
 	$: buttonClass = `button ${copied ? "button--copied" : ""}`
 	$: buttonText = !copied ? "Copy" : "Copied!"
@@ -130,6 +135,7 @@
 			gap: 1.5rem;
 		}
 
+		.list-item__align-left,
 		.list-item__align-right {
 			padding: 0px;
 		}
