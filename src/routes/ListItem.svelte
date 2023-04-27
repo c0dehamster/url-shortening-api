@@ -1,5 +1,8 @@
 <script lang="ts">
+	import { createEventDispatcher } from "svelte"
 	import { Utils } from "./Utils"
+
+	const dispatch = createEventDispatcher<{ delete: string }>()
 
 	export let id = ""
 	export let shortLink = ""
@@ -12,11 +15,26 @@
 		Utils.copyText(shortLink)
 	}
 
+	const onDelete = () => dispatch("delete", id)
+
 	$: buttonClass = `button ${copied ? "button--copied" : ""}`
 	$: buttonText = !copied ? "Copy" : "Copied!"
 </script>
 
 <li class="list-item" {id}>
+	<button class="button-icon" on:click={onDelete}>
+		<span class="sr-only">Delete</span>
+		<svg
+			class="icon"
+			width="14"
+			height="15"
+			xmlns="http://www.w3.org/2000/svg"
+			><path
+				d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+				fill="#69707D"
+				fill-rule="evenodd" /></svg>
+	</button>
+
 	<div class="list-item__align-left">
 		<div class="original-link-wrapper">
 			<a class="original-link" href={originalLink}>{originalLink}</a>
@@ -38,6 +56,7 @@
 	}
 
 	.list-item {
+		position: relative;
 		padding-block: 1rem;
 		border-radius: 0.25rem;
 
@@ -47,6 +66,19 @@
 		overflow-x: hidden;
 
 		font-size: var(--font-size-200);
+	}
+
+	/* The delete button should have been in the design,
+	especially considering the requirement for the data to persist */
+
+	.button-icon {
+		position: absolute;
+		top: 0.25rem;
+		left: 0.25rem;
+	}
+
+	.icon path {
+		fill: var(--color-neutral-400);
 	}
 
 	.list-item__align-left {

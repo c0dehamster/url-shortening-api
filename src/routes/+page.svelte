@@ -6,6 +6,11 @@
 	import CallToAction from "./CallToAction.svelte"
 
 	import { ResultsStore } from "./stores"
+
+	// I don't know the right way to type event parameters
+
+	const onDelete = (e: CustomEvent<string>) =>
+		ResultsStore.removeItem(e.detail)
 </script>
 
 <Hero />
@@ -16,7 +21,7 @@
 	{#if $ResultsStore.items.length > 0}
 		<ul class="results">
 			{#each $ResultsStore.items as item}
-				<ListItem {...item} />
+				<ListItem {...item} on:delete={onDelete} />
 			{/each}
 		</ul>
 	{/if}
