@@ -97,6 +97,8 @@
 		padding-inline: 1.5rem;
 		height: 2.5rem;
 		border-radius: 1.25rem;
+
+		font-size: var(--font-size-200);
 	}
 
 	/* Active states */
@@ -162,7 +164,6 @@
 
 		.link {
 			color: var(--color-neutral-100);
-			font-size: var(--font-size-400);
 			font-weight: var(--font-weight-bold);
 		}
 

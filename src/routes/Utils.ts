@@ -1,7 +1,6 @@
 export interface FetchError {
 	error: true
 	message: string
-
 }
 
 export interface Item {

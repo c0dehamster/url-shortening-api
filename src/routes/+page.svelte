@@ -39,7 +39,7 @@
 
 	.form-wrapper {
 		width: 100%;
-		padding-block-end: 5.5rem;
+		padding-block-end: 7.5rem;
 		padding-inline: var(--padding-inline-outer);
 	}
 </style>

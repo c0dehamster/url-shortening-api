@@ -31,7 +31,7 @@
 				<img src={iconDetailedRecords} alt="" class="card__icon" />
 			</div>
 
-			<h3 class="card__heading">Brand Recognition</h3>
+			<h3 class="card__heading">Detailed Records</h3>
 			<p class="card__description">
 				Gain insights into who is clicking your links. Knowing when and
 				where people engage with your content helps inform better
@@ -44,7 +44,7 @@
 				<img src={iconFullyCustomizable} alt="" class="card__icon" />
 			</div>
 
-			<h3 class="card__heading">Brand Recognition</h3>
+			<h3 class="card__heading">Fully Customizable</h3>
 			<p class="card__description">
 				Improve brand awareness and content discoverability through
 				customizable links, supercharging audience engagement.
@@ -60,7 +60,9 @@
 
 		justify-items: center;
 		text-align: center;
-		padding-block-end: 5rem;
+		padding-block-end: 4.5rem;
+
+		line-height: 1.6;
 	}
 
 	.services__heading {
@@ -126,6 +128,14 @@
 		background-color: var(--color-primary-600);
 	}
 
+	.card__heading {
+		font-size: var(--font-size-450);
+	}
+
+	.card__description {
+		font-size: var(--font-size-200);
+	}
+
 	/* Media query */
 
 	@media screen and (min-width: 40rem) {
@@ -141,6 +151,10 @@
 	}
 
 	@media screen and (min-width: 72rem) {
+		.services {
+			padding-block-end: 7rem;
+		}
+
 		.services__list {
 			grid-template-columns: 1fr 1fr 1fr;
 			gap: 2rem;

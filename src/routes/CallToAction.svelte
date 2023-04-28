@@ -49,5 +49,9 @@
 		.call-to-action__heading {
 			font-size: var(--font-size-800);
 		}
+
+		.button {
+			font-size: var(--font-size-400);
+		}
 	}
 </style>

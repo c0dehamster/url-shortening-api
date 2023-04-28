@@ -70,12 +70,13 @@
 
 	.hero__description {
 		padding-block-end: 2rem;
+		font-size: var(--font-size-300);
 	}
 
 	@media screen and (min-width: 72rem) {
 		.hero {
 			padding-block-end: 4.5rem;
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1.05fr 0.95fr;
 			grid-template-areas:
 				"contents illustration"
 				"contents illustration";
@@ -95,7 +96,7 @@
 		}
 
 		.hero__description {
-			font-size: var(--font-size-500);
+			font-size: var(--font-size-450);
 		}
 	}
 </style>
