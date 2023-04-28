@@ -63,7 +63,8 @@
 		display: none;
 	}
 
-	.navigation {
+	.navigation,
+	.nav-contents {
 		flex: 1;
 	}
 
@@ -71,18 +72,10 @@
 		display: none;
 	}
 
-	.nav-contents {
-		flex: 1;
-	}
-
 	.nav-contents,
 	.my-account,
 	.nav-links {
 		gap: clamp(1rem, 4.3vw, 2rem);
-	}
-
-	.nav-links {
-		list-style: none;
 	}
 
 	.link {
@@ -93,7 +86,6 @@
 	}
 
 	.button {
-		width: fit-content;
 		padding-inline: 1.5rem;
 		height: 2.5rem;
 		border-radius: 1.25rem;
@@ -140,8 +132,6 @@
 
 			padding: 2.5rem 1.5rem;
 			border-radius: 0.5rem;
-
-			flex-direction: column;
 
 			background-color: var(--color-primary-600);
 			opacity: 0;

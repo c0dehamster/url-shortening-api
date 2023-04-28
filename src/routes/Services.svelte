@@ -72,6 +72,8 @@
 	.services__description {
 		max-width: 33rem;
 		padding-block-end: 3.5rem;
+
+		font-size: var(--font-size-200);
 	}
 
 	.services__list {
@@ -102,8 +104,7 @@
 		position: relative;
 
 		padding-inline: 2rem;
-		padding-block-end: 2.5rem;
-		padding-block-start: 5rem;
+		padding-block: 5rem 2.5rem;
 
 		display: grid;
 		gap: 1rem;
@@ -161,10 +162,8 @@
 		}
 
 		.services__list::before {
-			top: 50%;
-			bottom: 50%;
-			left: 0;
-			right: 0;
+			inset-block: 50%;
+			inset-inline: 0;
 			transform: translateY(-50%);
 
 			width: 100%;
@@ -175,9 +174,7 @@
 
 		.card {
 			padding-block-start: 4.5rem;
-
 			justify-items: start;
-
 			text-align: start;
 		}
 

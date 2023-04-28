@@ -26,7 +26,6 @@
 	.app,
 	.wrapper {
 		position: relative;
-
 		display: grid;
 	}
 
@@ -38,8 +37,7 @@
 		content: "";
 		position: absolute;
 		top: 0;
-		left: 0;
-		right: 0;
+		inset-inline: 0;
 		height: 58rem;
 
 		background-color: white;

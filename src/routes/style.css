@@ -132,14 +132,16 @@ ul {
 
 .button {
 	position: relative;
+
+	min-width: fit-content;
+	padding-inline: 2.5rem;
+	height: 3.5rem;
+	border-radius: 1.75rem;
+
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-
-	padding-inline: 2.5rem;
-	height: 3.5rem;
-	border-radius: 1.75rem;
 
 	background-color: var(--color-primary-400);
 	color: white;

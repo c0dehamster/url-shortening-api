@@ -75,8 +75,6 @@
 		background-color: var(--color-primary-600);
 	}
 
-	/* Make sure to check how others dealt with this background */
-
 	.form::before {
 		content: "";
 		position: absolute;
@@ -108,7 +106,6 @@
 
 	.form__input-wrapper {
 		width: 100%;
-		grid-area: input;
 	}
 
 	.form__input {
@@ -118,13 +115,12 @@
 		transition: outline 100ms linear;
 	}
 
-	.error-message {
-		padding-block: 0.25rem;
+	.form__input::placeholder {
+		color: var(--color-neutral-400);
 	}
 
-	.button {
-		min-width: fit-content;
-		padding-inline: 2.5rem;
+	.error-message {
+		padding-block: 0.25rem;
 	}
 
 	/* Active states */

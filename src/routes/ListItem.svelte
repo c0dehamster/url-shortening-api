@@ -66,7 +66,7 @@
 
 		overflow-x: hidden;
 
-		font-size: var(--font-size-200);
+		font-size: var(--font-size-400);
 	}
 
 	/* The delete button should have been in the design,
@@ -78,13 +78,13 @@
 		left: 0.25rem;
 	}
 
+	.button-icon path {
+		fill: var(--color-button-delete);
+	}
+
 	.button-icon:hover path,
 	.button-icon:focus path {
 		fill: var(--color-neutral-400);
-	}
-
-	.button-icon path {
-		fill: var(--color-button-delete);
 	}
 
 	.list-item__align-left {
@@ -137,15 +137,11 @@
 
 	.original-link {
 		width: 100%;
-
 		color: var(--color-neutral-600);
-
-		font-size: var(--font-size-400);
 	}
 
 	.short-link {
 		color: var(--color-primary-400);
-		font-size: var(--font-size-400);
 	}
 
 	.button {

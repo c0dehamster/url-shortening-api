@@ -26,11 +26,11 @@
 		background-image: var(--background-mobile);
 		background-size: contain;
 		background-repeat: no-repeat;
+		background-position: top right;
 	}
 
 	.call-to-action__heading {
 		color: var(--color-neutral-100);
-
 		font-size: var(--font-size-700);
 	}
 

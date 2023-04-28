@@ -164,18 +164,16 @@
 
 	.footer-nav__section {
 		height: fit-content;
-
 		gap: 1rem;
+		font-size: var(--font-size-200);
 	}
 
 	.footer-nav__heading {
 		color: var(--color-neutral-100);
-		font-size: var(--font-size-200);
 	}
 
 	.link {
 		color: var(--color-neutral-400);
-		font-size: var(--font-size-200);
 		transition: color 100ms ease-in;
 	}
 
@@ -208,7 +206,6 @@
 	@media screen and (min-width: 60rem) {
 		.footer {
 			padding-block: 4rem;
-
 			text-align: start;
 		}
 
@@ -226,12 +223,9 @@
 			grid-template-areas: "logo footer-nav social-links";
 		}
 
+		.footer-nav,
 		.footer-nav__section,
 		.footer-nav__list {
-			justify-items: start;
-		}
-
-		.footer-nav {
 			justify-items: start;
 		}
 
