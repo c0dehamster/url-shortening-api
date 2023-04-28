@@ -19,6 +19,7 @@
 		if (!item.error) {
 			error = false
 			ResultsStore.addItem(item)
+			initialLink = ""
 		} else {
 			displayError(item.message)
 		}
