@@ -39,7 +39,6 @@
 </script>
 
 <form
-	action=""
 	class="form"
 	style="--background-mobile: url({backgroundMobile}); --background-desktop: url({backgroundDesktop})"
 	on:submit|preventDefault={onSubmit}>

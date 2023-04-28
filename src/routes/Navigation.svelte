@@ -8,7 +8,7 @@
 	const onClick = () => (expanded = !expanded)
 </script>
 
-<nav class="navigation">
+<nav class="navigation" aria-label="primary">
 	<button class="button-icon" aria-expanded={expanded} on:click={onClick}>
 		<svg width="16" height="15" xmlns="http://www.w3.org/2000/svg"
 			><path
