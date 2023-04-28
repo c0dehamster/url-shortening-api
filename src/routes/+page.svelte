@@ -13,6 +13,10 @@
 		ResultsStore.removeItem(e.detail)
 </script>
 
+<svelte:head>
+	<title>Frontend Mentor | Url shortening API landing page</title>
+</svelte:head>
+
 <Hero />
 
 <div class="form-wrapper">
