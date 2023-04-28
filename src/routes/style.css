@@ -159,6 +159,10 @@ ul {
 	background: transparent;
 }
 
+.button-icon path {
+	transition: fill 100ms ease-in;
+}
+
 .sr-only {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);

@@ -62,6 +62,7 @@
 
 		background-color: white;
 		box-shadow: 0 0 0.5rem 0.5rem rgb(0 0 0 / 0.05);
+		--color-button-delete: var(--color-neutral-200);
 
 		overflow-x: hidden;
 
@@ -77,8 +78,13 @@
 		left: 0.25rem;
 	}
 
-	.icon path {
+	.button-icon:hover path,
+	.button-icon:focus path {
 		fill: var(--color-neutral-400);
+	}
+
+	.button-icon path {
+		fill: var(--color-button-delete);
 	}
 
 	.list-item__align-left {
@@ -178,6 +184,16 @@
 			justify-content: stretch;
 
 			box-shadow: 0 0 1rem 0.5rem rgb(0 0 0 / 0.05);
+			--color-button-delete: transparent;
+		}
+
+		.list-item:hover,
+		.list-item:focus-within {
+			--color-button-delete: var(--color-neutral-200);
+		}
+
+		.button-icon {
+			padding: 0.2rem;
 		}
 
 		.original-link-wrapper {
