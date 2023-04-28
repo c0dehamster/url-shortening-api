@@ -1,3 +1,4 @@
+import { browser } from "$app/environment"
 import { writable } from "svelte/store"
 import type { Writable } from "svelte/store"
 
@@ -7,9 +8,18 @@ interface Item {
     originalLink: string
 }
 
-const createArrayStore = () => {
+
+let items: Item[] = []
+
+if (browser) {
+	let results = localStorage.getItem("results")
+
+	if (results && results !== "undefined") items = JSON.parse(results)
+}
+
+const createArrayStore = (items: Item[]) => {
 	const { set, update, subscribe }: Writable<{items: Item[]}> = writable({
-		items: [],
+		items
 	})
 
 	const addItem = (item: Item) => {
@@ -36,4 +46,10 @@ const createArrayStore = () => {
 	}
 }
 
-export const ResultsStore = createArrayStore()
+export const ResultsStore = createArrayStore(items)
+
+if (browser) {
+	ResultsStore.subscribe(value =>
+		localStorage.setItem("results", JSON.stringify(value.items))
+	)
+}

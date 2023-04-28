@@ -19,7 +19,6 @@
 		ResultsStore.addItem(response)
 	}
 
-	$: console.log($ResultsStore.items)
 	$: inputClass = `form__input ${error ? "form__input--error" : ""}`
 </script>
 
