@@ -2,21 +2,36 @@
 	import backgroundMobile from "../lib/images/bg-shorten-mobile.svg"
 	import backgroundDesktop from "../lib/images/bg-shorten-desktop.svg"
 
+	import type { Response } from "./Utils"
 	import { ResultsStore } from "./stores"
 	import { Utils } from "./Utils"
 
 	let error = false
 	let initialLink = ""
+	let errorMessage = ""
+
+	const displayError = (message: string) => {
+		error = true
+		errorMessage = message
+	}
+
+	const handleResponse = (item: Response) => {
+		if (!item.error) {
+			error = false
+			ResultsStore.addItem(item)
+		} else {
+			displayError(item.message)
+		}
+	}
 
 	const onSubmit = async () => {
 		if (initialLink === "") {
-			error = true
+			displayError("Please add a link")
 			return
 		}
 
-		error = false
 		let response = await Utils.getShortLink(initialLink)
-		ResultsStore.addItem(response)
+		handleResponse(response)
 	}
 
 	$: inputClass = `form__input ${error ? "form__input--error" : ""}`
@@ -36,7 +51,7 @@
 			bind:value={initialLink} />
 
 		{#if error}
-			<p class="error-message">Please add a link</p>
+			<p class="error-message">{errorMessage}</p>
 		{/if}
 	</div>
 

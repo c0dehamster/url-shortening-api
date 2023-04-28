@@ -1,12 +1,7 @@
 import { browser } from "$app/environment"
 import { writable } from "svelte/store"
 import type { Writable } from "svelte/store"
-
-interface Item {
-    id: string
-    shortLink: string
-    originalLink: string
-}
+import type { Item } from "./Utils"
 
 
 let items: Item[] = []
@@ -22,7 +17,7 @@ const createArrayStore = (items: Item[]) => {
 		items
 	})
 
-	const addItem = (item: Item) => {
+	const addItem = (item: Item) => {		
 		update(store => {
 			return {
 				...store,
