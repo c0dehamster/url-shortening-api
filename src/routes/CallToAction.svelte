@@ -30,6 +30,7 @@
 	}
 
 	.call-to-action__heading {
+		text-align: center;
 		color: var(--color-neutral-100);
 		font-size: var(--font-size-700);
 	}
