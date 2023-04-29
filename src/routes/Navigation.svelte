@@ -132,6 +132,8 @@
 
 			padding: 2.5rem 1.5rem;
 			border-radius: 0.5rem;
+			
+			transition: 200ms ease-in;
 
 			background-color: var(--color-primary-600);
 			opacity: 0;
@@ -139,7 +141,6 @@
 
 		.nav-contents--expanded {
 			z-index: 20;
-			transition: 200ms ease-in;
 
 			transform: translateY(0%);
 
